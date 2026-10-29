@@ -143,7 +143,7 @@ export function openHeroSelect(focusId: string, firstVisit = false): void {
   openHall(focusId, first);
   const box = $('#heroes');
   box.classList.toggle('first', first);
-  $('.hs-slot').textContent = `Save slot ${saveSlot()}`;
+  $('.hs-slot').textContent = `저장 슬롯 ${saveSlot()}`;
   for (const h of hallHeroes()) $(`.hs-card[data-c="${h.id}"] .hs-records`).innerHTML = records(h.profile);
   showPage(keptPage());
   box.classList.remove('hidden');
@@ -159,7 +159,7 @@ export function heroSelectSlotSwitched(focusId: string): void {
   hideTooltip();
   closeHall();
   openHall(focusId, true);
-  $('.hs-slot').textContent = `Save slot ${saveSlot()}`;
+  $('.hs-slot').textContent = `저장 슬롯 ${saveSlot()}`;
   for (const h of hallHeroes()) $(`.hs-card[data-c="${h.id}"] .hs-records`).innerHTML = records(h.profile);
   shown();
   layOut();
